@@ -34,26 +34,16 @@ public class Main {
 	
 		}
 		
-		char [][] new_array = new char[rows][cols];
-		for(int i=0; i<rows; i++) {
-			for(int k=0; k<cols; k++) {
-				
-				if(array[i].length<=k) 
-					new_array[i][k] = '\0';
-				else
-				new_array[i][k] = array[i][k];
-			}
-		}
-		
+
 		
 		for(int i=0; i<cols; i++) {
 			for(int k=0; k<rows; k++) {
-				if(new_array[k][i] == '\0')
+				if(array[k].length<=i)
 					continue;
 				else
-					System.out.printf("%c", new_array[k][i]);
+					System.out.printf("%c", array[k][i]);
 			}
 		}
 		
 	}
-} 
+}  
